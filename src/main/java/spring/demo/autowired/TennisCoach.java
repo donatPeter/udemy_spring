@@ -1,6 +1,7 @@
 package spring.demo.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,7 +11,8 @@ public class TennisCoach implements CoachInterface {
 
 	// Autowiring to use field injection
 	@Autowired
-	private FortuneServiceInterface fortuneService;
+	@Qualifier("anotherFortuneService")
+	private FortuneServiceInterface fortuneService; 
 
 	// define a default constructor
 	public TennisCoach() {
