@@ -13,15 +13,21 @@ public class TennisCoach implements CoachInterface {
 		System.out.println("TennisCoach constructor");
 	}
 
-	// autowiring the fortuneServiceInterface by either constructor or setter injection
+	// autowiring the fortuneServiceInterface by either constructor or setter
+	// injection or using any custom method name with the autowire annotation
 
 	// @Autowired
 	// public TennisCoach(FortuneServiceInterface fortuneService) {
 	// this.fortuneService = fortuneService;
 	// }
 
+	// @Autowired
+	// public void setFortuneService(FortuneServiceInterface fortuneService) {
+	// this.fortuneService = fortuneService;
+	// }
+
 	@Autowired
-	public void setFortuneService(FortuneServiceInterface fortuneService) {
+	public void itCanBeCalledAnyhow(FortuneServiceInterface fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
