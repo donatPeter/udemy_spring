@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.example;
+package spring.demo.hardcoded;
 
 /**
  *
  * @author mosomaci
  */
-public interface Coach {
+public class BaseballCoach implements Coach {
 
-    public String getDailyWorkout();
+    @Override
+    public String getDailyWorkout() {
+        return "akarmi";
+    }
 
 }
