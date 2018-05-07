@@ -8,8 +8,20 @@ public class TennisCoach implements CoachInterface {
 
 	private FortuneServiceInterface fortuneService;
 
+	// define a default constructor
+	public TennisCoach() {
+		System.out.println("TennisCoach constructor");
+	}
+
+	// autowiring the fortuneServiceInterface by either constructor or setter injection
+
+	// @Autowired
+	// public TennisCoach(FortuneServiceInterface fortuneService) {
+	// this.fortuneService = fortuneService;
+	// }
+
 	@Autowired
-	public TennisCoach(FortuneServiceInterface fortuneService) {
+	public void setFortuneService(FortuneServiceInterface fortuneService) {
 		this.fortuneService = fortuneService;
 	}
 
