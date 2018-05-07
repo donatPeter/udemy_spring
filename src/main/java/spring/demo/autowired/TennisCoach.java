@@ -2,9 +2,12 @@ package spring.demo.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope("prototype") // creating new instance for every getBean
+// @Scope("singleton") // creating only one instance
 public class TennisCoach implements CoachInterface {
 
 	// private FortuneServiceInterface fortuneService;
